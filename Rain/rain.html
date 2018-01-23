@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="rain.css">
+	<title>Raining</title>
+</head>
+
+<body onload="createRain();">
+
+	<!-- RAINER -->
+	<section class="rain"></section>
+
+
+<!-- SCRIPTS -->
+	<!--Firebase-->
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+	<script>
+	// Initialize Firebase
+  		var config = {
+	    	apiKey: "AIzaSyDdQbfE9yGf4EEYPWA-CBGUobPG8vFmtW8",
+		    authDomain: "rain-b9654.firebaseapp.com",
+		    databaseURL: "https://rain-b9654.firebaseio.com",
+		    projectId: "rain-b9654",
+		    storageBucket: "",
+		    messagingSenderId: "298362048136"
+		};
+		firebase.initializeApp(config);
+	</script>
+	
+	<!--SET UP jQuery -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- JavaScript Source -->
+	<script src="rain.js" type="text/javascript"></script>
+
+</body>
+</html>

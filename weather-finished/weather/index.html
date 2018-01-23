@@ -1,0 +1,47 @@
+<!doctype html>
+<title>Weather Lite</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="styles.css">
+<script src="fetch.js"></script>
+<h1>Weather Lite</h1>
+
+<form>
+    <label for="cityname">City Name</label>
+    <input id="cityname" required>
+    <input id="btnGetWeather" type="button" value="Get Weather">
+
+    <section id="output">
+        <p id="temperature"></p>
+    </section>
+</form>
+<script>
+    var btnGetWeather = document.querySelector("#btnGetWeather");
+    btnGetWeather.addEventListener("click", function() {
+        var city = document.querySelector("#cityname").value;
+        city = encodeURIComponent(city);
+        var key = "0685c4e8066b577d449babf619cf4ab4";
+        var url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key; 
+        fetch(url)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(weatherData) {
+                var temperature = weatherData.main.temp;
+                var tempC = temperature - 273.15;
+                var tempF = temperature * 9/5 - 459.67;
+                var p = document.querySelector("#temperature");
+                p.innerHTML = tempC.toFixed(0) + "C / " + 
+                    tempF.toFixed(0) + "F";
+                p.className = "";
+                if (tempC<5) {
+                    p.className = "cold";
+                } 
+                if (tempC>30) {
+                    p.className = "hot";
+                }
+            })
+            .catch(function() {
+                alert("Weather not available");
+            })
+    });
+</script>
