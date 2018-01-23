@@ -1,0 +1,16 @@
+#square {
+	border: 1px solid;
+	height: 300px;
+	width: 300px;
+	position: absolute;
+	margin-left: 25%;
+	margin-top: 25%;
+	display: inline;
+	text-align: center;
+
+}
+
+#mainImg {
+	width: 250px;
+
+}

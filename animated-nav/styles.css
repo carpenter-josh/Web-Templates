@@ -1,0 +1,56 @@
+body {
+	    font-family: "Lato", sans-serif;
+}
+
+/*SIDE NAV MENU*/
+
+.sidenav{
+	height: 100%; /*Sets the nav 100% of the device screen*/
+	width: 0; /*Reset width to 0 - later changed in the JS code*/
+	position: fixed; /*Makes it stay in place*/
+	z-index: 1; /*Stay on top of the rest of the content*/
+	top: 0; /*Sticks it to the top*/
+	left: 0; /*Positions it at absolute left*/
+	background-color: #232323;
+	overflow-x: hidden; /*Disables horizontal scroll*/
+	transition: 0.5s; /*0.5 second trasition effect to slide in the side nav*/
+	padding-top: 60px; /*Brings the content down on the page*/
+}
+
+/*NAV MENU LINKS*/
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color:#818181;
+	display: block;
+	transition: 0.3s;
+}
+
+/*MOUSE OVER ACTION*/
+.sidenav a:hover {
+	color: #f1f1f1;
+}
+
+/*CLOSE BUTTON (TOP RIGHT CORNER)*/
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+.sidenav .closebtn:hover{
+	cursor: pointer;	
+}
+
+/*MOBILE OPTIMIZATION*/
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+}
+
+#navSpan {
+	font-size:30px;
+	cursor:pointer;
+}

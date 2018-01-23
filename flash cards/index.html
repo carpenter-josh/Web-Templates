@@ -1,0 +1,30 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+	<div id="square">
+		<p id="mainText">Text</p>
+		<img id="mainImg" src="https://i.ytimg.com/vi/dDwZ9k23ZwU/maxresdefault.jpg" alt="">
+	</div>
+	<!--Scripts -->
+	<script type="text/javascript" src="scripts.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+	<script>
+		//Initiate Google Firebase
+		var config = {
+			apiKey: "AIzaSyAiZYJ0XPhmZFbbMpS9RkGy-d0UNlE3szM",
+			authDomain: "baby-cue-cards.firebaseapp.com",
+			databaseURL: "https://baby-cue-cards.firebaseio.com",
+			projectId: "baby-cue-cards",
+			storageBucket: "baby-cue-cards.appspot.com",
+			messagingSenderId: "895758513970"
+		};
+
+		firebase.initializeApp(config);
+</script>
+
+</body>
